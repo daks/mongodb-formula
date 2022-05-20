@@ -3,6 +3,10 @@
 control 'mongodb components' do
   title 'should be installed'
 
+  describe service('mongod') do
+    it { should be_running }
+  end
+
   # describe package('unzip') do
   #   it { should be_installed }
   # end
